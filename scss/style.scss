@@ -6,7 +6,6 @@
 @import "partials/variables";
 @import "partials/mixins";
 @import "partials/form";
-@import "partials/queries";
 
 // Base styles
 *,
@@ -37,12 +36,26 @@ a {
   position: absolute;
   top: 0;
   left: 0;
+  margin-top: 1em;
+
+  @media screen and (min-width: $break-md) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: $break-xl) {
+    flex-direction: row;
+  }
+
   &__icon {
     position: relative;
     margin-left: 1em;
     width: 4em;
     height: 4em;
     cursor: pointer;
+
+    @media screen and (min-width: $break-md) {
+      display: none;
+    }
 
     &--active {
       .main-header__hamburger {
@@ -96,15 +109,33 @@ a {
   &__logo {
     width: 60%;
     margin-right: 1em;
+
+    @media screen and (min-width: $break-xl) {
+      width: 20%;
+      margin-left: 1em;
+    }
   }
 
   &__nav {
+    width: 100%;
     position: absolute;
-    left: -100%;
+    left: -150%;
     top: 100%;
     background: $primaryColor;
     opacity: 0.8;
     transition: left 0.6s ease-in-out;
+
+    @media screen and (min-width: $break-md) {
+      width: initial;
+      position: static;
+      background: none;
+      margin-top: 2.5em;
+    }
+
+    @media screen and (min-width: $break-xl) {
+      margin-top: 0;
+      margin-right: 1em;
+    }
 
     &--active {
       display: block;
@@ -113,6 +144,9 @@ a {
   }
 
   &__list {
+    @media screen and (min-width: $break-md) {
+      display: flex;
+    }
   }
 
   &__list-item {
@@ -121,16 +155,30 @@ a {
     text-align: center;
     transition: background-color 0.2s ease-in-out;
 
+    @media screen and (min-width: $break-md) {
+      padding: 0.7em 0;
+      border-right: 1px solid $primaryTextColor;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
     &:hover,
     &:active {
-      background: darken($color: $primaryColor, $amount: 7);
+      background: darken($color: $primaryColor, $amount: 5);
     }
   }
 
   &__link {
     font-size: 1.2em;
-    padding: 2.5em 4em;
+    padding: 2.5em 3em;
     text-transform: uppercase;
+
+    @media screen and (min-width: $break-md) {
+      padding: 1em 1.5em;
+      font-size: 0.8em;
+    }
   }
 }
 
@@ -140,10 +188,34 @@ a {
   width: 100%;
   height: 60vh;
   margin-bottom: 4em;
+
+  @media screen and (min-width: $break-xl) {
+    height: 100vh;
+  }
+}
+
+.main-content {
+  margin: 0 auto;
+  @media screen and (min-width: $break-md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: $break-xl) {
+    width: 80%;
+  }
 }
 
 .card {
   margin-bottom: 2em;
+
+  @media screen and (min-width: $break-md) {
+    flex: 1 40%;
+  }
+
+  @media screen and (min-width: $break-xl) {
+    flex-basis: 30%;
+  }
 
   &__img {
     padding: 0.5em 2em;
