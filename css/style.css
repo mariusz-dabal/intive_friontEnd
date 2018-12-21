@@ -201,7 +201,7 @@ a {
       display: block;
       left: 0; }
   .main-header__list-item {
-    padding: 3em 2em;
+    padding: 3em 1em;
     color: #fff;
     text-align: center;
     transition: background-color 0.2s ease-in-out; }
