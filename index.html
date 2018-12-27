@@ -1,81 +1,60 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Rent a Hero</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-  </head>
-  <body>
-    <header class="main-header">
-      <div class="main-header__icon">
-        <div class="main-header__hamburger"></div>
-      </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Rent a Hero</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<header class="main-header">
+			<div class="main-logo">
+				<div class="main-logo__icon">
+					<div class="main-logo__hamburger"></div>
+				</div>
 
-      <img
-        src="images/logo.png"
-        alt="Rent a hero logo"
-        class="main-header__logo"
-      />
-      <nav class="main-header__nav">
-        <ul class="main-header__list">
-          <li class="main-header__list-item">
-            <a href="" class="main-header__link">Dodaj Herosa</a>
-          </li>
-          <li class="main-header__list-item">
-            <a href="" class="main-header__link">Edytuj Herosa</a>
-          </li>
-          <li class="main-header__list-item">
-            <a href="" class="main-header__link">Usuń Herosa</a>
-          </li>
-          <li class="main-header__list-item">
-            <a href="" class="main-header__link">Wyczyść Bazę</a>
-          </li>
-          <li class="main-header__list-item">
-            <a href="" class="main-header__link">Wczytaj Herosów</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <!-- /main-header -->
-    <section class="hero"></section>
-    <main class="main-content">
-      <div class="card">
-        <img src="images/superman.jpg" alt="hero" class="card__img" />
-        <h3 class="card__title">Superman</h3>
-        <p class="card__price">Cena wynajmu: 3500zł/h</p>
-      </div>
-      <div class="card">
-        <img src="images/hulk.jpg" alt="hero" class="card__img" />
-        <h3 class="card__title">Hulk</h3>
-        <p class="card__price">Cena wynajmu: 25000zł/h</p>
-      </div>
-      <div class="card">
-        <img src="images/thor.jpg" alt="hero" class="card__img" />
-        <h3 class="card__title">Thor</h3>
-        <p class="card__price">Cena wynajmu: 55000zł/h</p>
-      </div>
-      <div class="card">
-        <img src="images/ironman.jpeg" alt="hero" class="card__img" />
-        <h3 class="card__title">Ironman</h3>
-        <p class="card__price">Cena wynajmu: 75000zł/h</p>
-      </div>
-      <div class="card">
-        <img src="images/harrypotter.jpg" alt="hero" class="card__img" />
-        <h3 class="card__title">Potter</h3>
-        <p class="card__price">Cena wynajmu: 125000zł/h</p>
-      </div>
-      <div class="card">
-        <img src="images/batman.jpg" alt="hero" class="card__img" />
-        <h3 class="card__title">Batman</h3>
-        <p class="card__price">Cena wynajmu: 2000zł/h</p>
-      </div>
-    </main>
-    <footer class="main-footer">
-      Need a Hero - Pure JS/CSS Aplikacja do ćwiczenia nabytej wiedzy o
-      JavaScript
-    </footer>
-    <script src="scripts.js"></script>
-  </body>
+				<a href="index.html" class="main-logo__link">
+					<img
+						src="images/logo.png"
+						alt="Rent a hero logo"
+						class="main-logo__logo"
+				/></a>
+			</div>
+			<!-- /main-logo -->
+
+			<nav class="main-header__nav">
+				<ul class="main-header__list">
+					<li class="main-header__list-item"></li>
+					<li class="main-header__list-item">
+						<a href="form.html" class="main-header__link">Dodaj Herosa</a>
+					</li>
+					<li class="main-header__list-item">
+						<a href="" class="main-header__link">Edytuj Herosa</a>
+					</li>
+					<li class="main-header__list-item">
+						<a href="" class="main-header__link">Usuń Herosa</a>
+					</li>
+					<li class="main-header__list-item">
+						<a href="" class="main-header__link">Wyczyść Bazę</a>
+					</li>
+					<li class="main-header__list-item">
+						<a href="" class="main-header__link">Wczytaj Herosów</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- /main-header -->
+
+		<main class="main-content" id="main-content"></main>
+		<!-- /main-content -->
+
+		<footer class="main-footer">
+			Need a Hero - Pure JS/CSS Aplikacja do ćwiczenia nabytej wiedzy o
+			JavaScript
+		</footer>
+		<!-- /footer -->
+
+		<script src="scripts.js"></script>
+	</body>
 </html>

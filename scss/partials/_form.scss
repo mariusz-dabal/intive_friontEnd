@@ -1,0 +1,81 @@
+.form {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	.main-header {
+		height: initial;
+		background-position: center top;
+		margin-bottom: 0;
+
+		@media screen and (min-width: $break-md) {
+			padding-bottom: 1em;
+		}
+
+		.main-logo {
+			@media screen and (max-width: $break-xs) {
+				&--sticky {
+					position: initial;
+					background: initial;
+					opacity: initial;
+				}
+			}
+		}
+	}
+
+	.main-content {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1 0 auto;
+
+		.main-form {
+			width: 80%;
+			text-align: center;
+			padding: 1em 2em;
+			-webkit-box-shadow: 0px 5px 16px -2px rgba(0, 0, 0, 0.76);
+			-moz-box-shadow: 0px 5px 16px -2px rgba(0, 0, 0, 0.76);
+			box-shadow: 0px 5px 16px -2px rgba(0, 0, 0, 0.76);
+
+			@media screen and (min-width: $break-md) {
+				width: 60%;
+				padding: 1em 4em;
+			}
+
+			@media screen and (min-width: $break-xl) {
+				width: 40%;
+			}
+
+			&__heading {
+				text-align: center;
+				font-size: 1.8em;
+				padding: 1em 0;
+			}
+
+			&__input {
+				display: block;
+				width: 100%;
+				padding: 1em 0;
+				margin-bottom: 2em;
+				border: none;
+				outline: none;
+				border-bottom: 1px solid $secondaryTextColor;
+			}
+
+			&__submit {
+				padding: 1em 3em;
+				cursor: pointer;
+				background: $buttonColor;
+				color: white;
+				border: none;
+				outline: none;
+				flex-basis: auto;
+			}
+		}
+	}
+
+	.main-footer {
+		flex-shrink: 0;
+	}
+}

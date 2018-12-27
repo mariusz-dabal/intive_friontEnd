@@ -1,38 +1,87 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Rent a Hero</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-  </head>
-  <body>
-    <header class="main-header">
-      <img
-        src="images/logo.png"
-        alt="Rent a hero logo"
-        class="main-header__logo"
-      />
-      <nav class="main-header__nav">
-        <ul class="main-header__list">
-          <li class="main-header__list-item">
-            <a href="" class="main-header__link">Dodaj Herosa</a>
-          </li>
-          <li class="main-header__list-item">
-            Edytuj Herosa<a href="" class="main-header__link">Usuń Herosa</a>
-          </li>
-          <li class="main-header__list-item">
-            <a href="" class="main-header__link">Wyczyść Bazę</a>
-          </li>
-          <li class="main-header__list-item">
-            <a href="" class="main-header__link"></a>
-          </li>
-          <li class="main-header__list-item">
-            Wczytaj Herosów<a href="" class="main-header__link"></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Rent a Hero</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body class="form">
+		<header class="main-header">
+			<div class="main-logo">
+				<div class="main-logo__icon">
+					<div class="main-logo__hamburger"></div>
+				</div>
+
+				<a href="index.html" class="main-logo__link">
+					<img
+						src="images/logo.png"
+						alt="Rent a hero logo"
+						class="main-logo__logo"
+					/>
+				</a>
+			</div>
+			<!-- /main-logo -->
+
+			<nav class="main-header__nav">
+				<ul class="main-header__list">
+					<li class="main-header__list-item"></li>
+					<li class="main-header__list-item">
+						<a href="" class="main-header__link">Dodaj Herosa</a>
+					</li>
+					<li class="main-header__list-item">
+						<a href="" class="main-header__link">Edytuj Herosa</a>
+					</li>
+					<li class="main-header__list-item">
+						<a href="" class="main-header__link">Usuń Herosa</a>
+					</li>
+					<li class="main-header__list-item">
+						<a href="" class="main-header__link">Wyczyść Bazę</a>
+					</li>
+					<li class="main-header__list-item">
+						<a href="" class="main-header__link">Wczytaj Herosów</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- /main-header -->
+
+		<main class="main-content">
+			<form action="#" class="main-form">
+				<h3 class="main-form__heading">Dodaj Herosa</h3>
+
+				<input
+					type="text"
+					class="main-form__input"
+					placeholder="Nazwa Bohatera"
+				/>
+				<input
+					type="text"
+					class="main-form__input"
+					placeholder="Adres/nazwa zdjęcia"
+				/>
+				<input
+					type="text"
+					class="main-form__input"
+					placeholder="Cena wynajmu"
+				/>
+				<input
+					type="text"
+					class="main-form__input"
+					placeholder="Opis Bohatera"
+				/>
+
+				<input type="submit" value="submit" class="main-form__submit" />
+			</form>
+		</main>
+
+		<footer class="main-footer">
+			Need a Hero - Pure JS/CSS Aplikacja do ćwiczenia nabytej wiedzy o
+			JavaScript
+		</footer>
+		<!-- /footer -->
+
+		<script src="scripts.js"></script>
+	</body>
 </html>
