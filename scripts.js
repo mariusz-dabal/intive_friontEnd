@@ -6,14 +6,25 @@ const mainHeaderNav = document.querySelector(".main-header__nav");
 
 const mainLogo = document.querySelector(".main-logo");
 
+const clearDataBase = document.querySelector("#clearDataBase");
+
 const mainContent = document.querySelector("#main-content");
 
+const mainForm = document.querySelector(".main-form");
+
+const newHeroName = document.querySelector("#newHeroName");
+const newHeroImg = document.querySelector("#newHeroImg");
+const newHeroPrice = document.querySelector("#newHeroPrice");
+const newHeroDesc = document.querySelector("#newHeroDesc");
+
+const submit = document.querySelector("#submitBtn");
+
 // Starting Heroes
-const heroes = [
+const defaultHeroes = [
 	{
 		name: "Sumerman",
 		description:
-			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem totam voluptatibus ullam dolore dolor eligendi molestiae autem eaque in neque?",
+			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur sit et ipsam iusto nesciunt, molestiae voluptatum beatae totam. Omnis minus recusandae, odit consequuntur maiores eos nam expedita qui voluptate officia. Autem laboriosam non, tempore laudantium praesentium ad provident? Quidem quo laudantium quibusdam tempora ea dicta. Recusandae, facilis minus. Accusantium!",
 		image: "images/superman.jpg",
 		price: "3500",
 		isAvailable: true
@@ -21,7 +32,7 @@ const heroes = [
 	{
 		name: "Hulk",
 		description:
-			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem totam voluptatibus ullam dolore dolor eligendi molestiae autem eaque in neque?",
+			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur sit et ipsam iusto nesciunt, molestiae voluptatum beatae totam. Omnis minus recusandae, odit consequuntur maiores eos nam expedita qui voluptate officia. Autem laboriosam non, tempore laudantium praesentium ad provident? Quidem quo laudantium quibusdam tempora ea dicta. Recusandae, facilis minus. Accusantium!",
 		image: "images/hulk.jpg",
 		price: "250000",
 		isAvailable: true
@@ -29,7 +40,7 @@ const heroes = [
 	{
 		name: "Thor",
 		description:
-			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem totam voluptatibus ullam dolore dolor eligendi molestiae autem eaque in neque?",
+			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur sit et ipsam iusto nesciunt, molestiae voluptatum beatae totam. Omnis minus recusandae, odit consequuntur maiores eos nam expedita qui voluptate officia. Autem laboriosam non, tempore laudantium praesentium ad provident? Quidem quo laudantium quibusdam tempora ea dicta. Recusandae, facilis minus. Accusantium!",
 		image: "images/thor.jpg",
 		price: "55000",
 		isAvailable: true
@@ -37,7 +48,7 @@ const heroes = [
 	{
 		name: "Ironman",
 		description:
-			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem totam voluptatibus ullam dolore dolor eligendi molestiae autem eaque in neque?",
+			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur sit et ipsam iusto nesciunt, molestiae voluptatum beatae totam. Omnis minus recusandae, odit consequuntur maiores eos nam expedita qui voluptate officia. Autem laboriosam non, tempore laudantium praesentium ad provident? Quidem quo laudantium quibusdam tempora ea dicta. Recusandae, facilis minus. Accusantium!",
 		image: "images/ironman.jpeg",
 		price: "75000",
 		isAvailable: true
@@ -45,7 +56,7 @@ const heroes = [
 	{
 		name: "Potter",
 		description:
-			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem totam voluptatibus ullam dolore dolor eligendi molestiae autem eaque in neque?",
+			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur sit et ipsam iusto nesciunt, molestiae voluptatum beatae totam. Omnis minus recusandae, odit consequuntur maiores eos nam expedita qui voluptate officia. Autem laboriosam non, tempore laudantium praesentium ad provident? Quidem quo laudantium quibusdam tempora ea dicta. Recusandae, facilis minus. Accusantium!",
 		image: "images/harrypotter.jpg",
 		price: "125000",
 		isAvailable: true
@@ -53,7 +64,7 @@ const heroes = [
 	{
 		name: "Batman",
 		description:
-			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem totam voluptatibus ullam dolore dolor eligendi molestiae autem eaque in neque?",
+			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur sit et ipsam iusto nesciunt, molestiae voluptatum beatae totam. Omnis minus recusandae, odit consequuntur maiores eos nam expedita qui voluptate officia. Autem laboriosam non, tempore laudantium praesentium ad provident? Quidem quo laudantium quibusdam tempora ea dicta. Recusandae, facilis minus. Accusantium!",
 		image: "images/batman.jpg",
 		price: "2000",
 		isAvailable: true
@@ -98,17 +109,20 @@ function createModal(hero) {
 	img.setAttribute("src", hero.image);
 	img.setAttribute("alt", `Hero ${hero.name}`);
 
+	const wrapper = document.createElement("div");
+	wrapper.className = "modal__wrapper";
+
 	const title = document.createElement("h2");
 	title.className = "modal__title";
-	title.textContent = `I'm ${hero.name}`;
+	title.textContent = `I'm ${hero.name}!`;
 
 	const para = document.createElement("p");
 	para.className = "modal__desc";
 	para.textContent = hero.description;
 
-	const price = document.createElement("p");
-	price.classList.add("card__price");
-	price.textContent = `WYNAJEM: ${hero.price}ZŁ/H`;
+	const price = document.createElement("div");
+	price.classList.add("modal__price");
+	price.textContent = `WYNAJEM: ${hero.price} ZŁ/H`;
 
 	const addBtn = document.createElement("button");
 	addBtn.className = "modal__btn";
@@ -119,9 +133,11 @@ function createModal(hero) {
 	closeBtn.innerHTML = "&times;";
 
 	modalContent.appendChild(img);
-	modalContent.appendChild(title);
-	modalContent.appendChild(para);
-	modalContent.appendChild(addBtn);
+	wrapper.appendChild(title);
+	wrapper.appendChild(para);
+	wrapper.appendChild(price);
+	wrapper.appendChild(addBtn);
+	modalContent.appendChild(wrapper);
 	modalContent.appendChild(closeBtn);
 	modal.appendChild(modalContent);
 
@@ -150,24 +166,59 @@ window.onscroll = function() {
 };
 
 // Add starting heroes to Local Storage
-heroes.forEach(hero => {
+defaultHeroes.forEach(hero => {
 	localStorage.setItem(hero.name, JSON.stringify(hero));
 });
 
 // Add heroes from Local Storage to the DOM
-for (let i = 0; i < localStorage.length; i++) {
-	let hero = localStorage.getItem(localStorage.key(i));
-	hero = JSON.parse(hero);
+// ***************** On load probably
+// ***************** Make function out of that
+if (mainContent) {
+	for (let i = 0; i < localStorage.length; i++) {
+		let hero = localStorage.getItem(localStorage.key(i));
+		hero = JSON.parse(hero);
 
-	if (hero.isAvailable) {
-		createHero(hero);
+		if (hero.isAvailable) {
+			createHero(hero);
+		}
 	}
+
+	// Opening modal window
+	mainContent.addEventListener("click", event => {
+		if (event.target.className === "card__img") {
+			let hero = JSON.parse(localStorage.getItem(event.target.id));
+			createModal(hero);
+		}
+	});
 }
 
-// Opening modal window
-mainContent.addEventListener("click", event => {
-	if (event.target.className === "card__img") {
-		let hero = JSON.parse(localStorage.getItem(event.target.id));
-		createModal(hero);
-	}
+// Adding new hero to Lokal Storage & DOM
+// separate JS?
+// submit.addEventListener("click", event => {
+// 	event.preventDefault();
+// 	const mainFormArr = Array.from(mainForm);
+
+// 	mainFormArr.forEach(input => {
+// 		if (!input.value) {
+// 			console.log(`Missing input: ${input.name}`);
+// 		}
+// 	});
+
+// 	const newHero = {};
+// 	newHero.name = newHeroName.value;
+// 	newHero.description = newHeroDesc.value;
+// 	newHero.image = newHeroImg.value;
+// 	newHero.price = newHeroPrice.value;
+// 	newHero.isAvailable = true;
+
+// 	localStorage.setItem(newHero.name, JSON.stringify(newHero));
+
+// 	createHero(newHero);
+
+// 	window.location.href = "index.html";
+// });
+
+// Clearing Local Storage
+clearDataBase.addEventListener("click", () => {
+	localStorage.clear();
 });

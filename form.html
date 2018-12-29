@@ -27,19 +27,19 @@
 			<nav class="main-header__nav">
 				<ul class="main-header__list">
 					<li class="main-header__list-item"></li>
-					<li class="main-header__list-item">
+					<li id="addNewHero" class="main-header__list-item">
 						<a href="" class="main-header__link">Dodaj Herosa</a>
 					</li>
-					<li class="main-header__list-item">
+					<li id="editHero" class="main-header__list-item">
 						<a href="" class="main-header__link">Edytuj Herosa</a>
 					</li>
-					<li class="main-header__list-item">
+					<li id="deleteHero" class="main-header__list-item">
 						<a href="" class="main-header__link">Usuń Herosa</a>
 					</li>
-					<li class="main-header__list-item">
+					<li id="clearDataBase" class="main-header__list-item">
 						<a href="" class="main-header__link">Wyczyść Bazę</a>
 					</li>
-					<li class="main-header__list-item">
+					<li id="loadHeroes" class="main-header__list-item">
 						<a href="" class="main-header__link">Wczytaj Herosów</a>
 					</li>
 				</ul>
@@ -53,26 +53,41 @@
 
 				<input
 					type="text"
+					id="newHeroName"
 					class="main-form__input"
+					name="Nazwa Bohatera"
 					placeholder="Nazwa Bohatera"
 				/>
 				<input
 					type="text"
+					id="newHeroImg"
+					;
 					class="main-form__input"
+					name="Adres/nazwa zdjęcia"
 					placeholder="Adres/nazwa zdjęcia"
 				/>
 				<input
 					type="text"
+					id="newHeroPrice"
 					class="main-form__input"
+					name="Cena wynajmu"
 					placeholder="Cena wynajmu"
 				/>
 				<input
 					type="text"
+					id="newHeroDesc"
+					;
 					class="main-form__input"
+					name="Opis Bohatera"
 					placeholder="Opis Bohatera"
 				/>
 
-				<input type="submit" value="submit" class="main-form__submit" />
+				<input
+					type="submit"
+					value="submit"
+					id="submitBtn"
+					class="main-form__submit"
+				/>
 			</form>
 		</main>
 
