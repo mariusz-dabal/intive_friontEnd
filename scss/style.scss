@@ -11,25 +11,24 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 img {
-	width: 100%;
+  width: 100%;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 // Layout
 .main-header {
-<<<<<<< HEAD
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -256,350 +255,15 @@ a {
     flex-basis: 31%;
   }
 
-  &__img {
-  }
-
   &__title {
     font-size: 2em;
     text-align: center;
     padding: 0.2em 0;
   }
-=======
-	width: 100%;
-	display: flex;
-	align-items: flex-start;
-	top: 0;
-	left: 0;
 
-	background: $primaryColor url("../images/home-slide01.jpg") no-repeat center;
-	background-size: cover;
-	height: 60vh;
-	margin-bottom: 4em;
-
-	@media screen and (min-width: $break-md) {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	@media screen and (min-width: $break-xl) {
-		flex-direction: row;
-		align-items: flex-start;
-		justify-content: space-between;
-		padding-top: 1em;
-		height: 100vh;
-	}
-
-	.main-logo {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		transition: all 0.5s ease-in-out;
-		z-index: 2;
-
-		@media screen and (max-width: $break-xs) {
-			&--sticky {
-				position: fixed;
-				top: 0;
-				background: $primaryColor;
-				opacity: 0.8;
-			}
-		}
-
-		@media screen and (min-width: $break-md) {
-			justify-content: center;
-		}
-
-		@media screen and (min-width: $break-xl) {
-			width: initial;
-		}
-
-		&__icon {
-			position: relative;
-			margin-left: 1em;
-			padding: 1em;
-			width: 4em;
-			height: 4em;
-			cursor: pointer;
-
-			@media screen and (min-width: $break-md) {
-				display: none;
-			}
-
-			&--active {
-				.main-logo__hamburger {
-					background: rgba(0, 0, 0, 0);
-					box-shadow: none;
-				}
-
-				.main-logo__hamburger::before {
-					top: 0;
-					transform: rotate(45deg);
-				}
-
-				.main-logo__hamburger::after {
-					top: 0;
-					transform: rotate(135deg);
-				}
-			}
-		}
-
-		&__hamburger {
-			position: absolute;
-			width: 100%;
-			height: 10%;
-			background: $primaryTextColor;
-			top: 40%;
-			left: 50%;
-			transform: translate(-50%, 50%);
-			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-			transition: 0.5s;
-			z-index: 1;
-		}
-
-		&__hamburger::before,
-		&__hamburger::after {
-			content: "";
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background: $primaryTextColor;
-			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-			transition: 0.5s ease-in-out;
-		}
-
-		&__hamburger::before {
-			top: -1em;
-		}
-
-		&__hamburger::after {
-			top: 1em;
-		}
-
-		&__link {
-			display: block;
-			width: 60%;
-			margin-right: 1em;
-			padding: 1em 0;
-			z-index: 1;
-
-			@media screen and (min-width: $break-xl) {
-				width: 80%;
-				margin-left: 1em;
-				padding: 0;
-			}
-		}
-	}
-
-	&__nav {
-		width: 100%;
-		position: fixed;
-		left: -150%;
-		top: 0;
-		background: $primaryColor;
-		opacity: 0.8;
-		transition: left 0.6s ease-in-out;
-		z-index: 1;
-
-		@media screen and (min-width: $break-md) {
-			width: initial;
-			position: static;
-			background: none;
-		}
-
-		@media screen and (min-width: $break-xl) {
-			margin-top: 1em;
-			margin-right: 1em;
-		}
-
-		&--active {
-			left: 0;
-		}
-	}
-
-	&__list {
-		@media screen and (min-width: $break-md) {
-			display: flex;
-		}
-	}
-
-	&__list-item {
-		padding: 3em 1em;
-		color: $primaryTextColor;
-		text-align: center;
-		transition: background-color 0.2s ease-in-out;
-
-		@media screen and (min-width: $break-md) {
-			padding: 0.7em 0;
-			border-right: 1px solid $primaryTextColor;
-
-			&:first-child,
-			&:last-child {
-				border-right: none;
-			}
-		}
-
-		&:first-child:hover {
-			background: initial;
-		}
-
-		&:hover,
-		&:focus {
-			background: darken($color: $primaryColor, $amount: 5);
-		}
-	}
-
-	&__link {
-		font-size: 1.2em;
-		padding: 2.5em 3em;
-		text-transform: uppercase;
-
-		@media screen and (min-width: $break-md) {
-			padding: 1em 1.5em;
-			font-size: 0.8em;
-		}
-	}
-}
-
-.main-content {
-	margin: 0 auto;
-	position: relative;
-
-	@media screen and (min-width: $break-md) {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	@media screen and (min-width: $break-xl) {
-		width: 80%;
-	}
-}
-
-.card {
-	margin-bottom: 2em;
-	cursor: pointer;
-
-	@media screen and (min-width: $break-md) {
-		flex: 1 40%;
-	}
-
-	@media screen and (min-width: $break-xl) {
-		flex-basis: 30%;
-	}
-
-	&__img {
-		padding: 0.5em 2em;
-	}
-
-	&__title {
-		font-size: 2em;
-		text-align: center;
-	}
-
-	&__price {
-		text-align: center;
-	}
-}
->>>>>>> ee940d14cb6cd75f79c0e15b9da58d3bb02a9ced
-
-.modal {
-	position: fixed;
-	z-index: 5;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgb(0, 0, 0);
-	background-color: rgba(0, 0, 0, 0.4);
-	overflow: hidden;
-
-	&__content {
-		position: relative;
-		top: 20%;
-		width: 90%;
-		background-color: #fefefe;
-		margin: 0 auto;
-		padding: 20px;
-		border: 1px solid #888;
-		border-radius: 5px;
-
-		&::after {
-			display: block;
-			content: "";
-			clear: both;
-		}
-
-		@media screen and (min-width: $break-md) {
-			width: 80%;
-		}
-	}
-
-	&__img {
-		width: 40%;
-		height: 50vh;
-		object-position: top;
-		object-fit: cover;
-		padding-right: 1.5em;
-		float: left;
-
-		@media screen and (min-width: $break-xl) {
-			height: 50vh;
-		}
-	}
-
-	&__wrapper {
-		width: 60%;
-		height: 50vh;
-		border: 1px dashed red;
-		float: left;
-	}
-
-	&__title {
-		font-size: 1.3em;
-		text-transform: uppercase;
-	}
-
-	&__desc {
-		font-size: 0.8em;
-		color: $secondaryTextColor;
-	}
-
-	&__price {
-		// display: inline-block;
-		// width: 40%;
-		margin: 1em 0;
-		padding: 1em;
-		border-top: 1px dashed $secondaryTextColor;
-		border-bottom: 1px dashed $secondaryTextColor;
-		font-size: 0.8em;
-		color: darken($color: $secondaryTextColor, $amount: 20);
-	}
-
-	&__btn {
-		background: $secondaryButtonColor;
-		border: none;
-		outline: none;
-		color: $primaryTextColor;
-		text-transform: uppercase;
-		padding: 1em 2em;
-		transition: background-color 0.3s;
-
-		&:hover,
-		&:focus {
-			background: darken($color: $secondaryButtonColor, $amount: 5);
-		}
-	}
-
-	&__close {
-		position: absolute;
-		top: 0.2em;
-		right: 0.5em;
-		color: $secondaryTextColor;
-		float: right;
-		font-size: 2em;
-		cursor: pointer;
-	}
+  &__price {
+    text-align: center;
+  }
 }
 
 .modal {
@@ -867,9 +531,9 @@ a {
 }
 
 .main-footer {
-	background: $primaryColor;
-	color: $primaryTextColor;
-	text-align: center;
-	font-size: 0.8em;
-	padding: 2em;
+  background: $primaryColor;
+  color: $primaryTextColor;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 2em;
 }
