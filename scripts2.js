@@ -57,6 +57,7 @@ function fetchHero(url) {
     .then(res => res.json())
     .catch(error => {
       wait();
+      alert("Brak połączenia z serverem");
       console.log(error);
     });
 }
