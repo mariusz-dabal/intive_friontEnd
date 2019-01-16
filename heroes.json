@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Superman",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur sit et ipsam iusto nesciunt, molestiae voluptatum beatae totam. Omnis minus recusandae, odit consequuntur maiores eos nam expedita qui voluptate officia. Autem laboriosam non, tempore laudantium praesentium ad provident? Quidem quo laudantium quibusdam tempora ea dicta. Recusandae, facilis minus. Accusantium!",
+    "image": "images/superman.jpg",
+    "price": "3500",
+    "isAvailable": true
+  },
+  {
+    "name": "Hulk",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur sit et ipsam iusto nesciunt, molestiae voluptatum beatae totam. Omnis minus recusandae, odit consequuntur maiores eos nam expedita qui voluptate officia. Autem laboriosam non, tempore laudantium praesentium ad provident? Quidem quo laudantium quibusdam tempora ea dicta. Recusandae, facilis minus. Accusantium!",
+    "image": "images/hulk.jpg",
+    "price": "250000",
+    "isAvailable": true
+  },
+  {
+    "name": "Thor",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur sit et ipsam iusto nesciunt, molestiae voluptatum beatae totam. Omnis minus recusandae, odit consequuntur maiores eos nam expedita qui voluptate officia. Autem laboriosam non, tempore laudantium praesentium ad provident? Quidem quo laudantium quibusdam tempora ea dicta. Recusandae, facilis minus. Accusantium!",
+    "image": "images/thor.jpg",
+    "price": "55000",
+    "isAvailable": true
+  },
+  {
+    "name": "Ironman",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur sit et ipsam iusto nesciunt, molestiae voluptatum beatae totam. Omnis minus recusandae, odit consequuntur maiores eos nam expedita qui voluptate officia. Autem laboriosam non, tempore laudantium praesentium ad provident? Quidem quo laudantium quibusdam tempora ea dicta. Recusandae, facilis minus. Accusantium!",
+    "image": "images/ironman.jpeg",
+    "price": "75000",
+    "isAvailable": true
+  },
+  {
+    "name": "Potter",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur sit et ipsam iusto nesciunt, molestiae voluptatum beatae totam. Omnis minus recusandae, odit consequuntur maiores eos nam expedita qui voluptate officia. Autem laboriosam non, tempore laudantium praesentium ad provident? Quidem quo laudantium quibusdam tempora ea dicta. Recusandae, facilis minus. Accusantium!",
+    "image": "images/harrypotter.jpg",
+    "price": "125000",
+    "isAvailable": true
+  },
+  {
+    "name": "Batman",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur sit et ipsam iusto nesciunt, molestiae voluptatum beatae totam. Omnis minus recusandae, odit consequuntur maiores eos nam expedita qui voluptate officia. Autem laboriosam non, tempore laudantium praesentium ad provident? Quidem quo laudantium quibusdam tempora ea dicta. Recusandae, facilis minus. Accusantium!",
+    "image": "images/batman.jpg",
+    "price": "2000",
+    "isAvailable": true
+  }
+]

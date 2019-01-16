@@ -7,7 +7,7 @@
     <title>Rent a Hero</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
-  <body>
+  <body class="form delete">
     <header class="main-header">
       <div class="main-logo">
         <div class="main-logo__icon">
@@ -19,31 +19,28 @@
             src="images/logo.png"
             alt="Rent a hero logo"
             class="main-logo__logo"
-        /></a>
+          />
+        </a>
       </div>
       <!-- /main-logo -->
 
       <nav class="main-header__nav">
         <ul class="main-header__list">
           <li class="main-header__list-item"></li>
-          <li class="main-header__list-item">
-            <a href="form.html" id="addNewHero" class="main-header__link"
-              >Dodaj Herosa</a
-            >
+          <li id="addNewHero" class="main-header__list-item">
+            <a href="form.html" class="main-header__link">Dodaj Herosa</a>
           </li>
           <li id="editHero" class="main-header__list-item">
             <a href="edit.html" class="main-header__link">Edytuj Herosa</a>
           </li>
-          <li class="main-header__list-item">
-            <a href="delete.html" id="deleteHero" class="main-header__link"
-              >Usuń Herosa</a
-            >
+          <li id="deleteHero" class="main-header__list-item">
+            <a href="" class="main-header__link">Usuń Herosa</a>
           </li>
           <li id="clearDataBase" class="main-header__list-item">
             <a href="" class="main-header__link">Wyczyść Bazę</a>
           </li>
-          <li class="main-header__list-item">
-            <a href="" id="loadHeroes" class="main-header__link"
+          <li id="loadHeroes" class="main-header__list-item">
+            <a href="#" id="loadHeroes" class="main-header__link"
               >Wczytaj Herosów</a
             >
           </li>
@@ -52,30 +49,25 @@
     </header>
     <!-- /main-header -->
 
-    <div class="cart">
-      <header class="cart__header">
-        <div class="cart__cart">Koszyk</div>
-        <div class="cart__total">
-          Do zapłaty: <span class="cart__total--red">7599,00 zł</span>
-        </div>
-      </header>
-    </div>
-    <!-- /Cart -->
-    <main class="main-content" id="main-content"></main>
-    <!-- /main-content -->
-    <div class="modal">
-      <div class="modal__content modal__content--ef">
-        <img src="#" alt="#" class="modal__img" />
-        <div class="modal__wrapper">
-          <h2 class="modal__title"></h2>
-          <p class="modal__desc"></p>
-          <div class="modal__price"></div>
-          <button class="modal__btn" id="addToCartBtn">Dodaj do koszyka</button>
-          <span class="modal__close">&times;</span>
-        </div>
-      </div>
-    </div>
-    <!-- /modal -->
+    <main class="main-content" id="form-content">
+      <form method="DELETE" action="" class="main-form" id="deleteForm">
+        <h3 class="main-form__heading">Usuń Herosa</h3>
+
+        <label for="heroes" class="main-form__label"
+          >Wybierz istniejącego Herosa</label
+        >
+        <select name="heroes" id="selectHeroes" class="main-form__select">
+          <option value="0">---WYBIERZ---</option>
+        </select>
+
+        <input
+          type="submit"
+          value="submit"
+          id="submitBtn"
+          class="main-form__submit"
+        />
+      </form>
+    </main>
 
     <div class="loader"><div class="loader__animation"></div></div>
     <!-- /loader -->
